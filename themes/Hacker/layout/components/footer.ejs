@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    <% if (config.author){ %>
+    &copy; 2016 &ndash; <%= new Date().getFullYear() %> <a href="<%- config.url %>" target="_blank"><%= config.author %></a>
+    <% } else { %>
+    &copy; 2016 &ndash; <%= new Date().getFullYear() %> <a href="<%- config.url %>" target="_blank"><%= config.title %></a>
+    <% } %>
+  </p>
+</footer>

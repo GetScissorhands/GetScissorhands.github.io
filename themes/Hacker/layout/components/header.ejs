@@ -1,0 +1,19 @@
+<header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="<%- config.root %>"><img src="<%- config.root %>logo.png" alt="<%= config.title %>" /></a>
+    </h1>
+    <p class="site-description"><% if (config.subtitle){ %><%= config.subtitle %><% } %></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      <% for (var i in theme.menu){ %>
+        <% if (__(i) == "Home") { %>
+          <li><a href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a></li>
+        <% } else { %>
+          <li><a href="<%- url_for(theme.menu[i]) %>" target="_blank"><%= __(i) %></a></li>
+        <% } %>
+      <% } %>
+    </ul>
+  </nav>
+</header>
